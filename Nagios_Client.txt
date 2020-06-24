@@ -1,0 +1,13 @@
+# Client Server
+sudo apt update -y
+sudo apt -y install nagios-nrpe-server nagios-plugins
+sudo vim /etc/nagios/nrpe.cfg #allwed_hosts 192.168.50.10{NAGIOS_SERVER_IP}
+sudo systemctl restart nagios-nrpe-server
+
+# Nagios Server
+sudo apt update
+sudo install nagios-nrpe-plugin
+sudo cp /usr/lib/nagios/plugins/check_nrpe /usr/local/nagios/libexec/
+cd /usr/local/nagios/libexec/
+./check_nrpe -H 192.168.50.20
+./check_nrpe -H 192.168.50.20 -c check_users
