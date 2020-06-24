@@ -1,11 +1,11 @@
 #Download the source code
 
-cd /tmp
+cd /tmp && \
 wget https://downloads.sourceforge.net/project/nagiosgraph/nagiosgraph/1.5.2/nagiosgraph-1.5.2.tar.gz
 
 #Unzip the file
 
-tar xvf nagiosgraph-1.5.2.tar.gz
+tar xvf nagiosgraph-1.5.2.tar.gz && \
 cd nagiosgraph-1.5.2
 
 #Install the prereqs
